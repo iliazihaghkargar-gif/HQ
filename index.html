@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:;">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <style>
+      /* Disable text selection globally */
+      * {
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+        -webkit-touch-callout: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+      }
+      
+      /* Disable highlighting */
+      ::selection {
+        background: transparent !important;
+      }
+      
+      ::-moz-selection {
+        background: transparent !important;
+      }
+      
+      /* Hide scrollbars to prevent inspection */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      
+      body {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <title>Futuristic Contract Terms Display</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Additional protection
+      (function() {
+        'use strict';
+        
+        // Disable debugging
+        setInterval(function() {
+          debugger;
+        }, 100);
+        
+        // Detect if running in dev mode
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+          return; // Allow in development
+        }
+        
+        // Production security measures
+        Object.defineProperty(window, 'devtools', {
+          get: function() {
+            return {open: false, orientation: null};
+          },
+          set: function() {}
+        });
+        
+        // Disable common inspection methods
+        window.addEventListener('beforeunload', function() {
+          return 'Are you sure you want to leave?';
+        });
+        
+      })();
+    </script>
+  </body>
+</html>
