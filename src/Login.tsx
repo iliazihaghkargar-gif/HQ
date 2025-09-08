@@ -237,8 +237,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
 
             {/* Security info */}
             <div className="mt-6 pt-4 border-t border-green-500/20">
-              <div className="flex items-center justify-between text-xs text-gray-500">
-                <span>Attempts: {attempts}/{MAX_ATTEMPTS}</span>
+              <div className="flex items-center justify-center text-xs text-gray-500">
                 <span className="flex items-center gap-1">
                   <Shield className="w-3 h-3" />
                   ENCRYPTED
